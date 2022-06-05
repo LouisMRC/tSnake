@@ -90,6 +90,7 @@ void gameLoop(WINDOW *gameWin)
             std::array<int, 2> nextPos = {nextX(snake[0][0], direction), nextY(snake[0][1], direction)};
             if(nextPos == apple)
             {
+		beep();
                 score++;
                 speed+=0.05;
                 apple = applePos(snake);
